@@ -54,26 +54,24 @@
 
     <canvas id="matrix-canvas"></canvas>
     
-    <audio id="TitikKetinggian"></audio>
-    <audio id="MendakiGunung"></audio>
-    <audio id="GembiraAdlObat"></audio>
+    <audio id="cyber-player"></audio>
 
-    <<div id="loading-screen" class="fixed inset-0 bg-[#06040a] z-50 flex flex-col justify-center items-center transition-opacity duration-700">
-    <div class="relative flex flex-col items-center">
-        
-       <img src="https://files.catbox.moe/n1854p.jpeg" 
-     alt="Loading" 
-     class="w-28 h-28 object-cover rounded-full mb-8 border-2 border-purple-500/50 neon-glow animate-pulse">
-        
-        <h1 class="text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 animate-pulse">
-            Loading Screen 
-        </h1>
-        <p class="text-gray-400 mt-2 text-sm">Menyiapkan Modul</p>
-        <button id="skip-btn" class="mt-12 px-6 py-2.5 bg-purple-900/40 border border-purple-500/50 rounded-full text-sm font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer neon-glow">
-            Skip Intro <i class="fas fa-forward ml-2"></i>
-        </button>
+    <div id="loading-screen" class="fixed inset-0 bg-[#06040a] z-50 flex flex-col justify-center items-center transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            
+           <img src="https://files.catbox.moe/n1854p.jpeg" 
+             alt="Loading" 
+             class="w-28 h-28 object-cover rounded-full mb-8 border-2 border-purple-500/50 neon-glow animate-pulse">
+            
+            <h1 class="text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 animate-pulse">
+                Loading Screen 
+            </h1>
+            <p class="text-gray-400 mt-2 text-sm">Menyiapkan Modul</p>
+            <button id="skip-btn" class="mt-12 px-6 py-2.5 bg-purple-900/40 border border-purple-500/50 rounded-full text-sm font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer neon-glow">
+                Skip Intro <i class="fas fa-forward ml-2"></i>
+            </button>
+        </div>
     </div>
-</div>
 
     <div id="main-content" class="opacity-0 transition-opacity duration-1000 min-h-screen flex flex-col relative z-10">
         
@@ -135,8 +133,8 @@
                     
                     <div class="rounded-2xl overflow-hidden border border-purple-500/30 w-full aspect-[16/10] md:aspect-[16/9] relative shadow-2xl group">
                       <video class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" autoplay loop muted playsinline>
-    <source src="https://files.catbox.moe/5s88mm.mp4" type="video/mp4">
-</video>
+                        <source src="https://files.catbox.moe/5s88mm.mp4" type="video/mp4">
+                      </video>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-6">
                             <span class="px-4 py-1.5 bg-black/60 backdrop-blur-md rounded-full text-xs text-purple-300 border border-purple-500/30 font-medium tracking-wide">
                                 <i class="fas fa-play mr-2 text-pink-500 animate-pulse"></i> Play Video
@@ -216,21 +214,18 @@
                         <i class="fas fa-music text-purple-400"></i> Musik ♥️💛💚
                     </h2>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                        <!-- Cari kode ini dan silakan ubah teksnya -->
-                <button onclick="playMusic('TitikKetinggian')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
-                 <span>🎵 Titik Ketinggian</span>
-               <i class="fas fa-play text-xs text-purple-400"></i>
-          </button>
-                        <!-- Cari kode ini dan silakan ubah teksnya -->
-                <button onclick="playMusic('MendakiGunung')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
-                 <span>🎵 Mendaki Gunung</span>
-               <i class="fas fa-play text-xs text-purple-400"></i>
-          </button>
-                        <!-- Cari kode ini dan silakan ubah teksnya -->
-                <button onclick="playMusic('GembiraAdlObat')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
-                 <span>🎵 Gembira adalah Obat</span>
-               <i class="fas fa-play text-xs text-purple-400"></i>
-          </button>
+                        <button onclick="playMusic('TitikKetinggian')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
+                            <span>🎵 Titik Ketinggian</span>
+                            <i class="fas fa-play text-xs text-purple-400"></i>
+                        </button>
+                        <button onclick="playMusic('MendakiGunung')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
+                            <span>🎵 Mendaki Gunung</span>
+                            <i class="fas fa-play text-xs text-purple-400"></i>
+                        </button>
+                        <button onclick="playMusic('GembiraAdlObat')" class="music-btn p-4 rounded-xl border border-purple-500/20 bg-purple-950/20 flex items-center justify-between hover:bg-purple-600/20 transition-all text-sm font-semibold cursor-pointer">
+                            <span>🎵 Gembira adalah Obat</span>
+                        <i class="fas fa-play text-xs text-purple-400"></i>
+                        </button>
                     </div>
                     <div id="now-playing" class="mt-4 text-xs text-center text-purple-400 hidden animate-pulse">
                         <i class="fas fa-compact-disc animate-spin mr-1"></i> Sekarang Memutar: <span id="track-name" class="font-bold"></span>
@@ -339,7 +334,7 @@
                 let aiResponse = "Analisis data selesai. Saya mengerti pertanyaan Anda mengenai '" + prompt + "'. Fitur integrasi API GPT cerdas sesungguhnya dapat dipasang di sini.";
                 
                 if(prompt.toLowerCase().includes('produk') || prompt.toLowerCase().includes('beli')) {
-                    aiResponse = "Tentu! Anda dapat melihat produk premium terbaik kami di Halaman 2 (Marketplace). Kami menyediakan Cyber Hologram UI Kit dan Yoman AudioAudio Pack dengan diskon khusus hari ini.";
+                    aiResponse = "Tentu! Anda dapat melihat produk premium terbaik kami di Halaman 2 (Marketplace). Kami menyediakan Cyber Hologram UI Kit dan Yoman Audio Pack dengan diskon khusus hari ini.";
                 } else if(prompt.toLowerCase().includes('halo') || prompt.toLowerCase().includes('hi')) {
                     aiResponse = "Halo! Senang bisa mengobrol dengan Anda. Ada projek hebat apa yang sedang kita bangun hari ini?";
                 }
@@ -365,13 +360,7 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        function playMusic(trackName) {
-            const nowPlaying = document.getElementById('now-playing');
-            const trackNameSpan = document.getElementById('track-name');
-            nowPlaying.classList.remove('hidden');
-            trackNameSpan.innerText = trackName;
-        }
-
+        // Efek Latar Belakang Matrix 
         const canvas = document.getElementById('matrix-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -419,29 +408,31 @@
 
         setInterval(drawMatrix, 33);
         
+        // --- SISTEM PEMUTAR MUSIK LOKAL (DIPERBAIKI) ---
         const laguList = {
-       'TitikKetinggian': 'https://files.catbox.moe/jl5gpw.mp3',
-       'MendakiGunung': 'https://files.catbox.moe/py58nl.mp3',
-       'GembiraAdlObat': 'https://files.catbox.moe/7d2kk3.mp3',
-       'Judul Lagu Baru Anda': 'audio/lagu-baru-kamu.mp3' // <--- Contoh file lokal di folder Anda
-   };
+            'TitikKetinggian': 'audio/titik-ketinggian.mp3',
+            'MendakiGunung': 'audio/mendaki-gunung.mp3',
+            'GembiraAdlObat': 'audio/gembira-adalah-obat.mp3'
+        };
 
-   const audioPlayer = document.getElementById('cyber-player');
+        const audioPlayer = document.getElementById('cyber-player');
 
-   function playMusic(trackName) {
-       const nowPlaying = document.getElementById('now-playing');
-       const trackNameSpan = document.getElementById('track-name');
-       
-       // Tampilkan teks info lagu
-       nowPlaying.classList.remove('hidden');
-       trackNameSpan.innerText = trackName;
+        function playMusic(trackName) {
+            const nowPlaying = document.getElementById('now-playing');
+            const trackNameSpan = document.getElementById('track-name');
+            
+            // Tampilkan teks info lagu
+            nowPlaying.classList.remove('hidden');
+            trackNameSpan.innerText = trackName.replace(/([A-Z])/g, ' $1').trim(); // Rapikan spasi teks
 
-       // Putar audionya
-       if (laguList[trackName]) {
-           audioPlayer.src = laguList[trackName];
-           audioPlayer.play().catch(e => console.log("Audio play diproteksi browser, butuh interaksi user pertama kali."));
-       }
-   }
+            // Putar audionya
+            if (laguList[trackName]) {
+                audioPlayer.src = laguList[trackName];
+                audioPlayer.play().catch(e => {
+                    console.log("Pemutaran otomatis diblokir browser sebelum ada interaksi pertama user.");
+                });
+            }
+        }
     </script>
 </body>
 </html>
